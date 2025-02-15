@@ -6,6 +6,7 @@
 
 - `cd` into cloned task-tools directory
 - run `task` to view task options
+- run tasks with `task <task-name>`
 
 # install
 

@@ -1,0 +1,47 @@
+version: '3'
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - task --list
+      
+  check-system-uptime:
+    desc: "output system uptime"
+    cmds:
+      - uptime
+
+  check-system-interfaces:
+    desc: "output interface ips and mac addresses"
+    cmds:
+      - ip a
+
+  check-system-disks:
+    desc: "output system disks and mounts"
+    cmds:
+      - lsblk
+
+  check-ram-usage:
+    desc: "see current ram usage"
+    cmds:
+      - free -h
+
+  check-live-system-metrics:
+    desc: "open top to view live metrics (alternatives: htop, btop)"
+    cmds:
+      - top
+
+  check-free-disk-space:
+    desc: "ouput free space on all mount points"
+    cmds:
+      - df -h
+
+  check-directories-dick-usage:
+    desc: "output current disk usage of top level folders"
+    cmds:
+      - du -h -d 1 /
+
+  check-command-history:
+    desc: "output history of commands run as current user on system"
+    cmds:
+      - cat ~/.bash_history
